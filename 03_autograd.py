@@ -57,7 +57,7 @@ print(x.grad)
 # - x.detach()
 # - wrap in 'with torch.no_grad():'
 
-# .requires_grad_(...) changes an existing Tensor’s requires_grad flag in-place.
+# .requires_grad_(...) changes an existing flag in-place.
 a = torch.randn(2, 2)
 print(a.requires_grad)
 b = ((a * 3) / (a - 1))
@@ -80,7 +80,7 @@ with torch.no_grad():
     print((x ** 2).requires_grad)
 
 # -------------
-# with backward() the gradient for this tensor will be accumulated into .grad attribute.
+# backward() accumulates the gradient for this tensor into .grad attribute.
 # !!! We need to be careful during optimization !!!
 # Use .zero_() to empty the gradients before a new optimization step!
 weights = torch.ones(4, requires_grad=True)
