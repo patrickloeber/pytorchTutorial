@@ -11,7 +11,7 @@ import numpy as np
 #                           sum = 1.0
 #
 
-# Softmax applies the exponential function to each element, and notmalizes
+# Softmax applies the exponential function to each element, and normalizes
 # by dividing by the sum of all these exponentials
 # -> squashes the output to be between 0 and 1 = probability
 # sum of all probabilities is 1
@@ -54,16 +54,15 @@ print(f'Loss2 numpy: {l2:.4f}')
 loss = nn.CrossEntropyLoss()
 # loss(input, target)
 
-# target is of size nBatch = 1
+# target is of size nSamples = 1
 # each element has class label: 0, 1, or 2
 # Y (=target) contains class labels, not one-hot
 Y = torch.tensor([0])
 
-# input is of size nBatch x nClasses = 1 x 3
+# input is of size nSamples x nClasses = 1 x 3
 # y_pred (=input) must be raw, unnormalizes scores (logits) for each class, not softmax
 Y_pred_good = torch.tensor([[2.0, 1.0, 0.1]])
 Y_pred_bad = torch.tensor([[0.5, 2.0, 0.3]])
-
 l1 = loss(Y_pred_good, Y)
 l2 = loss(Y_pred_bad, Y)
 
@@ -97,6 +96,11 @@ l1 = loss(Y_pred_good, Y)
 l2 = loss(Y_pred_bad, Y)
 print(f'Batch Loss1:  {l1.item():.4f}')
 print(f'Batch Loss2: {l2.item():.4f}')
+
+# get predictions
+_, predictions1 = torch.max(Y_pred_good, 1)
+_, predictions2 = torch.max(Y_pred_bad, 1)
+print(f'Actual class: {Y}, Y_pred1: {predictions1}, Y_pred2: {predictions2}')
 
 # Binary classification
 class NeuralNet1(nn.Module):
