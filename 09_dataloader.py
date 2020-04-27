@@ -58,6 +58,7 @@ print(features, labels)
 # Load whole dataset with DataLoader
 # shuffle: shuffle data, good for training
 # num_workers: faster loading with multiple subprocesses
+# !!! IF YOU GET AN ERROR DURING LOADING, SET num_workers TO 0 !!!
 train_loader = DataLoader(dataset=dataset,
                           batch_size=4,
                           shuffle=True,
