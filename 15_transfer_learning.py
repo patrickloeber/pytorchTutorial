@@ -153,7 +153,7 @@ optimizer = optim.SGD(model.parameters(), lr=0.001)
 #     validate(...)
 #     scheduler.step()
 
-step_lr_scheduler = lr_scheduler.StepLR(optimizer_ft, step_size=7, gamma=0.1)
+step_lr_scheduler = lr_scheduler.StepLR(optimizer, step_size=7, gamma=0.1)
 
 model = train_model(model, criterion, optimizer, step_lr_scheduler, num_epochs=25)
 
