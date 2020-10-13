@@ -113,7 +113,8 @@ for epoch in range(num_epochs):
             print (f'Epoch [{epoch+1}/{num_epochs}], Step [{i+1}/{n_total_steps}], Loss: {loss.item():.4f}')
             ############## TENSORBOARD ########################
             writer.add_scalar('training loss', running_loss / 100, epoch * n_total_steps + i)
-            writer.add_scalar('accuracy', running_correct / 100, epoch * n_total_steps + i)
+            running_accuracy = running_correct / 100 / predicted.size(0)
+            writer.add_scalar('accuracy', running_accuracy, epoch * n_total_steps + i)
             running_correct = 0
             running_loss = 0.0
             ###################################################
