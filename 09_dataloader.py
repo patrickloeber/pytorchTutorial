@@ -66,7 +66,7 @@ train_loader = DataLoader(dataset=dataset,
 
 # convert to an iterator and look at one random sample
 dataiter = iter(train_loader)
-data = dataiter.next()
+data = next(dataiter)
 features, labels = data
 print(features, labels)
 
@@ -97,6 +97,6 @@ train_loader = DataLoader(dataset=train_dataset,
 
 # look at one random sample
 dataiter = iter(train_loader)
-data = dataiter.next()
+data = next(dataiter)
 inputs, targets = data
 print(inputs.shape, targets.shape)

@@ -45,7 +45,7 @@ def imshow(img):
 
 # get some random training images
 dataiter = iter(train_loader)
-images, labels = dataiter.next()
+images, labels = next(dataiter)
 
 # show images
 imshow(torchvision.utils.make_grid(images))
