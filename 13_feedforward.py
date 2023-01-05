@@ -35,7 +35,7 @@ test_loader = torch.utils.data.DataLoader(dataset=test_dataset,
                                           shuffle=False)
 
 examples = iter(test_loader)
-example_data, example_targets = examples.next()
+example_data, example_targets = next(examples)
 
 for i in range(6):
     plt.subplot(2,3,i+1)
