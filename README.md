@@ -22,3 +22,5 @@ PyTorch Beginner Tutorials from "Patrick Loeber" YouTube channel.
   17. Save and Load Models
 
 There is a single notebook that contains all these tutorials combined. This notebook can be easily run on Google Colab (just open the notebook there).
+
+The notebook is divided into sections. You can choose your desired section and run it independently from the rest of the notebook
