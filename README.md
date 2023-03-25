@@ -1,4 +1,4 @@
-PyTorch Beginner Tutorials from my YouTube channel.
+PyTorch Beginner Tutorials from "Patrick Loeber" YouTube channel.
 
 ## Watch the Playlist
   [![Alt text](https://img.youtube.com/vi/EMXfZB8FVUA/hqdefault.jpg)](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4)
@@ -20,3 +20,5 @@ PyTorch Beginner Tutorials from my YouTube channel.
   15. Transfer Learning
   16. Tensorboard
   17. Save and Load Models
+
+There is a single notebook that contains all these tutorials combined. This notebook can be easily run on Google Colab (just open the notebook there).
