@@ -31,7 +31,8 @@ class WineDataset(Dataset):
     def __init__(self):
         # Initialize data, download, etc.
         # read with numpy or pandas
-        xy = np.loadtxt('./data/wine/wine.csv', delimiter=',', dtype=np.float32, skiprows=1)
+#        xy = np.loadtxt('./data/wine/wine.csv', delimiter=',', dtype=np.float32, skiprows=1)
+        xy = np.loadtxt('https://raw.githubusercontent.com/arjunjohnk/pytorchTutorial/master/data/wine/wine.csv', delimiter=',', dtype=np.float32, skiprows=1)
         self.n_samples = xy.shape[0]
 
         # here the first column is the class label, the rest are the features
